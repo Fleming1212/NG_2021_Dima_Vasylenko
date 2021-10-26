@@ -16,12 +16,10 @@ int main()
             if ((i == 0) || (j == 0) || (i == n - 1) || (j == n - 1))
             {
                 cout << "*";
-            }
-            else
-            {
+            } else {
                 cout << " ";
             }
         }
         cout << endl;
-  }
+    }
 }
