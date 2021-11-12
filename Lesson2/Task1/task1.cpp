@@ -11,10 +11,9 @@ int main()
     cin >> num;
 
 
-    for (int i = 0; num > 0; i++)
+    for (int i = num; i > 0; i/=10)
     {
-        result += num%10;
-        num/=10;
+        result += i%10;
     }
 
     cout << "sum = ";
