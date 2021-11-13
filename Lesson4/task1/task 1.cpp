@@ -11,7 +11,7 @@ int main()
    cin.getline(line,100);
 
    for(int i =0; line[i] > 0;i++){
-       if(line[i] == 33 || line[i] == 44 || line[i] == 63 || line[i] == 46 || line[i] == 58 || line[i] == 59){
+       if(line[i] == '!' || line[i] == ',' || line[i] == '?' || line[i] == '.' || line[i] == ':' || line[i] == ';'){
            kolvo++;
        }
    }
