@@ -29,12 +29,12 @@ int main() {
         cout << "Enter your bank account" << endl;
         cin >> bankAccount;
 
-        while (bankAccount < 0 && bankAccount > 10) {
+        while (bankAccount < 0 || bankAccount > 10) {
             cout << "You entered wrong bank account, enter again: " << endl;
             cin >> bankAccount;
         }
 
-        cout << "Enter your pincode " << bankAccount << endl;
+        cout << "Enter your pincode "  << endl;
         cin >> currentpin;
 
         while (currentpin != pincode[bankAccount - 1]) {
