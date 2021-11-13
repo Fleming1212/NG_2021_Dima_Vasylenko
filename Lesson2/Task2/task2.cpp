@@ -3,25 +3,23 @@ using namespace std;
 
 int main()
 {
-    int num;
+    int Hcode = 0;
+    int num = 0;
 
-    cout << "Size: ";
+
+    cout << "Enter your number:" << endl;
     cin >> num;
-    cout << endl;
 
-    for (int i = 0; i < num; i++)
+
+    for ( int i = num % 10; num != 0; )
     {
-        for (int j = 0; j < num; j++)
-        {
-            if ((i == 0) || (j == 0) || (i == num - 1) || (j == num - 1))
-            {
-                cout << "*";
-            }
-            else
-            {
-                cout << " ";
-            }
-        }
-        cout << endl;
-  }
+        if ( num % 10 == num / 10 % 10 )
+            Hcode += num % 10;
+
+        if ( num < 10 && num == i )
+            Hcode += num;
+            num /= 10;
+    }
+
+    cout << "Your hashcode =  " << Hcode << endl<<endl;
 }
