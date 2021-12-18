@@ -15,10 +15,10 @@ int main() {
         9999,
         0000
     };
-    int money[10];
+    double money[10];
     int bankAccount;
     int currentpin;
-    int currentmoney;
+    double currentmoney;
     int operation;
     int moneyfstart = 500;
 
@@ -29,17 +29,20 @@ int main() {
         cout << "Enter your bank account" << endl;
         cin >> bankAccount;
 
-        while (bankAccount < 0 || bankAccount > 10) {
+        if (bankAccount < 0 || bankAccount > 10) {
+
             cout << "You entered wrong bank account, enter again: " << endl;
             cin >> bankAccount;
+            continue;
         }
 
         cout << "Enter your pincode "  << endl;
         cin >> currentpin;
 
-        while (currentpin != pincode[bankAccount - 1]) {
+        if (currentpin != pincode[bankAccount - 1]) {
             cout << "Your pincode is wrong ,enter your pincode one more time, please: " << endl;
             cin >> currentpin;
+            continue;
         }
         cout << "Successful pin" << endl << endl;
 
@@ -62,14 +65,17 @@ int main() {
             cout << "How much do you want to take?" << endl;
             cin >> currentmoney;
 
-            while (money[bankAccount - 1] < currentmoney) {
+
+            if (money[bankAccount - 1] < currentmoney) {
                 cout << " You don't have much money,enter again: " << endl;
                 cin >> currentmoney;
-                if (money[bankAccount - 1] >= currentmoney) {
-                    money[bankAccount - 1] -= currentmoney;
-                    break;
+                break;
                 }
-            }
+                 if (money[bankAccount - 1] >= currentmoney)
+                 {
+                    money[bankAccount - 1] -= currentmoney;
+
+                 }
 
             cout << "Money in your bank account: " << money[bankAccount - 1] << endl;
             break;
