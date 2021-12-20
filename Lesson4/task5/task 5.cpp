@@ -9,7 +9,7 @@ int main()
     cin.getline(words, 100);
     for (int i = 0;words[i] != 0; i++)
     {
-        if (words[i] == 'f' && words[i+1] == 'u' &&
+        while (words[i] == 'f' && words[i+1] == 'u' &&
             words[i+2] == 'c' && words[i+3] == 'k')
         {
                 words[i] = '*';
